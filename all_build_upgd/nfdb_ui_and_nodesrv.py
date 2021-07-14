@@ -60,9 +60,13 @@ def Nfdb_BuildUpd():
         path = os.path.join(dest, lukup)
         #os.mkdir(path)
         shutil.copytree('/home/cavisson/work/debasish/nfdb742/mltesting/filedetl_fr_auto/lookup', path)
-        shutil.copy('/home/cavisson/work/debasish/nfdb742/mltesting/filedetl_fr_auto/nfdb.yml', dest)
         shutil.copy('/home/cavisson/work/debasish/nfdb742/mltesting/filedetl_fr_auto/log4j2.properties', dest)
         shutil.copy('/home/cavisson/work/debasish/nfdb742/mltesting/filedetl_fr_auto/jvm.options', dest)
+        #for base_url
+        if glb.base == 'no':
+            shutil.copy('/home/cavisson/work/debasish/nfdb742/mltesting/filedetl_fr_auto/nfdb.yml', dest)
+        else:
+            shutil.copy('/home/cavisson/work/debasish/nfdb742/mltesting/filedetl_fr_auto/base/nfdb.yml', dest)
 
         os.chdir(r"/home/cavisson/work/debasish/nfdb742/mltesting/"+fnl+"/bin/")
         new1_dir = os.getcwd()
@@ -122,8 +126,12 @@ def Nfui_upd():
     print("build is succesfully untared")
     conf_js = new_dir1 + "/NetForest-UI/NetForest-Unified/assets/Config"
     conf_ser = new_dir1 + "/NetForest-UI/server/config"
-    shutil.copy('/home/cavisson/work/debasish/nfdb742/mltesting/filedetl_fr_auto/config.json', conf_js)
     shutil.copy('/home/cavisson/work/debasish/nfdb742/mltesting/filedetl_fr_auto/config.yml', conf_ser)
+    #for base_url
+    if glb.base == 'yes':
+        shutil.copy('/home/cavisson/work/debasish/nfdb742/mltesting/filedetl_fr_auto/base/config.json', conf_js)
+    else:
+        shutil.copy('/home/cavisson/work/debasish/nfdb742/mltesting/filedetl_fr_auto/config.json', conf_js)
 
     os.chdir(r"/home/cavisson/work/debasish/nfdb742/mltesting/ui/NetForest-UI/bin")
     perms = "chmod +x"+' '+"NetForestStart.sh"
@@ -179,7 +187,13 @@ def node_serv_upd():
         print("nodeserver build is succesfully untared")
 
         deflt_js = new_dir2 + '/LogMonServer/UnifiedServer/config'
-        shutil.copy('/home/cavisson/work/debasish/nfdb742/mltesting/filedetl_fr_auto/default.json', deflt_js)
+
+        #For base_url
+        if glb.base == 'yes':
+            shutil.copy('/home/cavisson/work/debasish/nfdb742/mltesting/filedetl_fr_auto/base/default.json', deflt_js)
+        else:
+            shutil.copy('/home/cavisson/work/debasish/nfdb742/mltesting/filedetl_fr_auto/default.json', deflt_js)
+
         os.chdir(r"/home/cavisson/work/debasish/nodeserver/LogMonServer/UnifiedServer/bin/")
         permsn = "chmod +x"+' '+"StartServer.sh"
         os.system(permsn)

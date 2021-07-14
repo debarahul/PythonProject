@@ -14,9 +14,15 @@ import thrdprty_and_nstrm
 import nfdb_ui_and_nodesrv
 import glb
 import grep_kill_prcs
-
+import base_url
 
 glbl_ver = glb.glbver()
+
+if glb.base == 'yes':
+    #update base url value
+    update_baseurl = base_url.updt_baseurl()
+else:
+    print(" ")
 
 print('')
 print("---I am killing now the NFDB process before upgrade new version of NFDB---")
