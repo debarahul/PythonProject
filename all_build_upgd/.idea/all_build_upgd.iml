@@ -4,5 +4,10 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="datascience_python" />
+    <orderEntry type="module" module-name="automation" />
+    <orderEntry type="module" module-name="maxdocs_automation" />
+    <orderEntry type="module" module-name="nfdbautomation" />
+    <orderEntry type="module" module-name="PythonPratice" />
   </component>
 </module>
