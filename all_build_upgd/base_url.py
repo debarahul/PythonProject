@@ -14,6 +14,7 @@ def updt_baseurl():
     os.chdir(r"/home/cavisson/work/debasish/nfdb742/mltesting/filedetl_fr_auto/base/")
     db_base = open("nfdb.yml","w")
     print('')
+    print('')
 
 
 
