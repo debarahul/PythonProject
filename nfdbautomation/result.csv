@@ -1,8 +1,0 @@
-Testcase_Id@TC_Name@Query@Type_of_TC@Status@ActualResult@Current
-NF-41338@"Verify _msearch/job using where clause ""==""."@index=gcp* maxdocs=25000 query=_exists_:resptime|where httpstatuscode==200@Positive@Timeout@Getting timeout for this test case. Check request payload and nfdb logs@90+sec
-NF-41339@"Verify _msearch/job using where clause ""<""."@"index=gcp* maxdocs=25000 query=_exists_:resptime|where resptime ""lt 225"@Positive@Timeout@Getting timeout for this test case. Check request payload and nfdb logs@90+sec
-NF-41340@"Verify _msearch/job using where clause ""<=""."@"index=gcp* maxdocs=25000 query=_exists_:resptime|where resptime ""lt= 25"@Positive@Timeout@Getting timeout for this test case. Check request payload and nfdb logs@90+sec
-NF-41341@"Verify _msearch/job using where clause "">""."@"index=gcp* maxdocs=25000 query=_exists_:resptime|where resptime ""gt 25"@Positive@Timeout@Getting timeout for this test case. Check request payload and nfdb logs@90+sec
-NF-41342@"Verify _msearch/job using where clause "">=""."@"index=gcp* maxdocs=25000 query=_exists_:resptime|where resptime""gt=25"@Positive@Timeout@Getting timeout for this test case. Check request payload and nfdb logs@90+sec
-NF-41343@"Verify _msearch/job using where clause ""!=""."@index=gcp* maxdocs=25000 query=_exists_:resptime|where resptime!=25@Positive@Timeout@Getting timeout for this test case. Check request payload and nfdb logs@90+sec
-NF-41344@Verify _msearch/job using where clause with single AND operator.@"index=gcp* maxdocs=25000 query=_exists_:resptime|where resptime==118 AND Env==""prod"""@Positive@Timeout@Getting timeout for this test case. Check request payload and nfdb logs@90+sec
