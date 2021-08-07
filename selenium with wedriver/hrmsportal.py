@@ -3,6 +3,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 import time
+
+
 browser = webdriver.Chrome('chromedriver')
 browser.get('http://10.10.20.24/SavvyHRMS/LoginPage.aspx')
 print(browser.title)
